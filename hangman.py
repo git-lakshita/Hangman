@@ -1,8 +1,4 @@
 from os import system
-
-def cls():
-    system ('cls')
-
 def hangman_game():
     cls()
     name = input("What is your name?")
@@ -15,7 +11,6 @@ def hangman_game():
     guesses = ""
     # Here we set the Secret
     word = "ramayan"
-
     while turns > 0:
         failed = 0
         for char in word:
@@ -43,5 +38,6 @@ def hangman_game():
     check = input("\nDo you want to play again Y/N?")
     if check == "Y" or check == "y" :
         hangman_game()
-
+def cls():
+    system ('cls')
 hangman_game()
